@@ -1,4 +1,30 @@
 EricBrown::Application.routes.draw do
+
+  comfy_route :cms_admin, :path => '/admin'
+
+
+  root "static_pages#home"
+
+  get 'static_pages/home'
+
+  get 'static_pages/about'
+
+  get 'static_pages/openHouse'
+
+  get 'static_pages/listings'
+
+  get 'static_pages/buyers'
+
+  get 'static_pages/sellers'
+
+  get 'static_pages/acreage'
+
+  get 'static_pages/resources'
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/', :sitemap => false
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

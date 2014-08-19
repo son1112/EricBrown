@@ -1,3 +1,87 @@
-EricBrown application
+Lincoln Home Market (Eric Brown)
 
-*Documentation forthcoming*
+* Content
+
+  Static Pages with CMS (use comfy mexican sofa)
+
+  - [ ] Static Pages
+
+    : rails g controller StaticPages home about openHouse listings buyers sellers acreage resources
+
+    [[./config/routes.rb]]
+
+    - [ ] Home
+    - [ ] About
+    - [ ] Open House
+
+      - [ ] Calendar
+    - [ ] Listings
+      
+      - [ ] Model after PH staff page
+      - [ ] Map
+    - [ ] Buyers
+    - [ ] Sellers
+    - [ ] Acreage
+    - [ ] Lincoln Resources
+
+  - [ ] CMS (comfy)
+
+    https://github.com/comfy/comfortable-mexican-sofa
+
+    : gem 'comfortable_mexican_sofa', '~> 1.12.0'
+
+    dependent upon bootstrap-sass ~> 3.1.0
+
+    : bundle install
+    : rails g comfy:cms
+    : rake db:migrate
+
+    restart server
+
+    in routes file, make sure the following line is last
+    : 'comfy_route :cms, :path => '/', :sitemap => false
+
+    update password using ENV
+
+    [[./config/initializers/comfortable_mexican_sofa.rb]]
+
+    : ComfortableMexicanSofa::HttpAuth.username = ENV["COMFY_USERNAME"]
+    : ComfortableMexicanSofa::HttpAuth.password = ENV["COMFY_PASSWORD"]
+
+    set ENV in .env (make sure in .gitignore)
+
+    set ENV in heroku
+
+    : heroku config:set COMFY_USERNAME='username'
+    : heroku config:set COMFY_PASSWORD='password'
+
+  - [ ] Menu
+    
+    Home, About, Listings, Buyers, Acreage (windmill pic)
+
+* Application
+
+  In the future, Eric would like a blog feature
+
+* Style
+
+  - [ ] Model after new Prairie Hill website, with similar features to http://kentshomes.com
+
+  - [ ] Imagery
+
+    - [ ] Contact Steve Andel regarding photography
+
+  - [ ] Bootstrap
+
+  - [ ] Skrollr
+
+* Communication
+
+* Requirements
+
+* Configuration
+
+  - [ ] [[./config/routes.rb]]
+  - [ ] [[./Gemfile]]
+
+

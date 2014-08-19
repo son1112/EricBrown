@@ -9,7 +9,7 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1.0'
 gem 'bcrypt'
 gem 'pg'
 gem 'sdoc', '~> 0.4.0',          group: :doc
@@ -17,6 +17,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'skrollr-rails'
 gem 'rails_admin'
+gem 'comfortable_mexican_sofa', '~> 1.12.0'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
