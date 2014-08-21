@@ -5,21 +5,13 @@ EricBrown::Application.routes.draw do
 
   root "static_pages#home"
 
-  get 'static_pages/home'
-
-  get 'static_pages/about'
-
-  get 'static_pages/openHouse'
-
-  get 'static_pages/listings'
-
-  get 'static_pages/buyers'
-
-  get 'static_pages/sellers'
-
-  get 'static_pages/acreage'
-
-  get 'static_pages/resources'
+  get 'about' => 'static_pages#about'
+  get 'openhouse' => 'static_pages#openHouse'
+  get 'listings' => 'static_pages#listings'
+  get 'buyers' => 'static_pages#buyers'
+  get 'sellers' => 'static_pages#sellers'
+  get 'acreage' => 'static_pages#acreage'
+  get 'resources' => 'static_pages#resources'
 
   # Make sure this routeset is defined last
   comfy_route :cms, :path => '/', :sitemap => false
