@@ -11,6 +11,10 @@ html, body {
     font-family: "Open Sans Condensed";
 }
 
+.bottom-shadow {
+    box-shadow: 0 1px 5px 0.2px gray;
+}
+
 .padded-5 {
     padding: 5px;
 }
@@ -70,6 +74,7 @@ ul#horizontal-list li {
     height: 40px;
     text-align: center;
     background: $phill-grn;
+    z-index: 3;
     .name {
 	font-family: "Quicksand";
 	font-weight: bold;
@@ -82,5 +87,15 @@ ul#horizontal-list li {
 	color: transparent;
 	text-shadow: 10px 10px $phill-grn;
     }
+}
+
+.rect-white {
+    @extend .bottom-shadow;
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 120px;
+    z-index: 0;
 }
 
