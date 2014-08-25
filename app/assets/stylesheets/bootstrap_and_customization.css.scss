@@ -47,6 +47,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 40px;
 }
 
 .table {
@@ -55,7 +56,7 @@ body {
 }
 
 ul#horizontal-list {
-    @extend .padded-5;
+    @extend .padded;
     list-style: none;
     text-align: center;
 }
@@ -63,7 +64,7 @@ ul#horizontal-list {
 ul#horizontal-list li {
     display: inline-block;
     @extend .padded-15-lr;
-    font-size: 3vw;
+    font-size: 2vw;
     a {
 	color: $phill-grn;
 	font-weight: bold;
@@ -75,24 +76,33 @@ ul#horizontal-list li {
 
 #title {
     @extend #menu-outer;
-    @extend .padded-5;
+    padding-left: 15px;
     font-size: 3vw;
     top: 0;
     height: 40px;
-    text-align: center;
-    background: $phill-grn;
+    text-align: left;
+    background: green;
     z-index: 3;
     .name {
 	font-family: "Quicksand";
 	font-weight: bold;
+	position:relative;
+	top: 0;
     }
     .subtitle {
 	font-family: "Quicksand", "Open Sans Condensed";
+	position:relative;
+	top: 0;
+	left: -25px;
     }
     .icon {
 	font-size: 7vw;
 	color: transparent;
 	text-shadow: 10px 10px $phill-grn;
+	margin: 0;
+	position:relative;
+	top: 0;
+	left: -25px;
     }
 }
 
@@ -102,7 +112,7 @@ ul#horizontal-list li {
     width: 100%;
     position: fixed;
     top: 0;
-    height: 120px;
+    height: 101px;
     opacity: 0.9;
     z-index: 1;
 }
@@ -110,6 +120,7 @@ ul#horizontal-list li {
 .content {
     position: relative;
     background: white;
+    border-radius: 3px;
     width: 70%;
     padding: 15px;
     opacity: 0.8;
