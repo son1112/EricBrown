@@ -1,6 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand|Ubuntu|Roboto|Open+Sans+Condensed:300|Raleway|Yanone+Kaffeesatz|Pacifico|Dancing+Script|Courgette|Cinzel);
 
+$phill-grn: #3f8000;
+$phill-gold: #ffef19;
+$phill-blu: #e3f5fa;
+$phill-blu-light: #ebf7fa;
 
 @import 'bootstrap';
+
+html, body {
+    font-family: "Open Sans Condensed";
+}
 
 .padded-5 {
     padding: 5px;
@@ -23,7 +32,7 @@
 }
 
 #menu-outer {
-    background: gold;
+    background: $phill-gold;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -45,7 +54,8 @@ ul#horizontal-list li {
     @extend .padded-15-lr;
     font-size: 3vw;
     a {
-	color: white;
+	color: $phill-grn;
+	font-weight: bold;
 	&:hover {
 	    text-decoration: none;
 	}
@@ -59,4 +69,18 @@ ul#horizontal-list li {
     top: 0;
     height: 40px;
     text-align: center;
+    background: $phill-grn;
+    .name {
+	font-family: "Quicksand";
+	font-weight: bold;
+    }
+    .subtitle {
+	font-family: "Quicksand", "Open Sans Condensed";
+    }
+    .icon {
+	font-size: 7vw;
+	color: transparent;
+	text-shadow: 10px 10px $phill-grn;
+    }
 }
+
