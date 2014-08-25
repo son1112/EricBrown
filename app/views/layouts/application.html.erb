@@ -11,11 +11,23 @@
 
   <%= render 'layouts/header' %>
 
-  <div class="container" style="margin-top:60px;">
-    <%= yield %>
+  <div id='skrollr-body'>
+    <div class="container content" style="margin-top:120px;">
+      <%= yield %>
+    </div>
   </div>
 
   <%= render 'layouts/footer' %>
+
+  <script>
+   (function($){
+     skrollr.init({
+       forceHeight: false,
+       smoothScrolling: false
+     }).refresh();
+   } (jQuery));
+  </script>
+
 
 </body>
 </html>

@@ -75,6 +75,53 @@ Lincoln Home Market (Eric Brown)
 
   - [ ] Skrollr
 
+    https://github.com/reed/skrollr-rails
+
+    ???"@import 'skrollr';" in [[./app/assets/stylesheets/bootstrap_and_customization.css.scss]]?
+
+    - [X] add skrollr script
+
+      - [X] make sure skrollr-rails is in the Gemfile
+
+        [[./Gemfile]]
+
+	: gem 'skrollr-rails'
+
+      - [X] add the following script just before </body> tag
+
+	[[./app/views/layouts/application.html.erb]]
+
+	: <script>
+        :  (function($){
+	:    skrollr.init({
+	:      forceHeight: false,
+	:      smoothScrolling: false
+	:    }).refresh();
+        :  } (jQuery));
+	: </script>
+
+      - [X] Place #skrollr-body div tag around <%= yield %> tag
+
+	: <div id="skrollr-body">
+
+
+    - [X] require skrollr in application.js
+
+      [[./app/assets/javascripts/application.js]]
+
+      : //= require skrollr
+
+      - [X] For IE compatibility
+
+	: //= require skrollr
+	: //= require skrollr.ie
+
+      - [X] This plugin makes hashlinks scroll nicely to their target position.
+
+	: //= require skrollr
+	: //= require skrollr.menu
+      
+
 * Communication
 
 * Requirements
