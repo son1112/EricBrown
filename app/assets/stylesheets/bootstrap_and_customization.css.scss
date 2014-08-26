@@ -46,10 +46,13 @@ html, body {
 }
 
 #menu-outer {
+    @extend .bottom-shadow;
     background: $phill-gold;
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: 5px;
+    right: -5px;
+    width: 75%;
+    border-radius: 3px;
     height: 40px;
     opacity: 0.9;
     z-index: 4;
@@ -57,13 +60,14 @@ html, body {
 
 .table {
     display: table;
-    margin: 0 auto;
+    margin: 0 100px 0 0;
 }
 
 ul#horizontal-list {
     @extend .padded;
     list-style: none;
-    text-align: center;
+    text-align: right;
+    margin-right: 160px;
 }
 
 ul#horizontal-list li {
@@ -81,6 +85,8 @@ ul#horizontal-list li {
 
 #title {
     @extend #menu-outer;
+    box-shadow: none;
+    width: 100%;
     padding-left: 15px;
     font-size: 3vw;
     top: 0;
@@ -106,17 +112,20 @@ ul#horizontal-list li {
     .subtitle {
 	@extend .padded-15;
 	@extend .bottom-shadow;
-	padding-left: 405px;
+//	padding-left: 405px;
 	text-align: right;
 	font-family: "Quicksand", "Open Sans Condensed";
 	position:relative;
 	font-style: italic;
 	color: black;
 //	top: -25px;
-	top: 10px;
-	left: -145px;
+//	top: 10px;
+	top: -60px;
+//	left: -145px;
+	left: 100px;
 	background: $phill-gold;
 	border-radius: 3px;
+	width: 80%;
     }
     .icon {
 	font-size: 7vw;
@@ -140,8 +149,8 @@ ul#horizontal-list li {
     width: 100%;
     position: fixed;
     top: 0;
-    height: 131px;
-    opacity: 0.9;
+    height: 140px;
+//    opacity: 0.9;
     z-index: 1;
 }
 
@@ -149,8 +158,8 @@ ul#horizontal-list li {
     @extend .padded-15;
     @extend .bottom-shadow;
     position: fixed;
-    top: 130px;
-    right: 30px;
+    top: 160px;
+    left: 30px;
     z-index: 3;
     background: white;
     opacity: 0.9;
@@ -161,6 +170,7 @@ ul#horizontal-list li {
 	display: table;
 	margin: 0 auto;
 	border-radius: 3px;
+	@extend .bottom-shadow;
     }
     a {
 	color: $phill-grn;
@@ -178,15 +188,15 @@ ul#horizontal-list li {
 
 .content {
     position: relative;
-    left: 95px;
+    left: 255px;
     background: white;
     border-radius: 3px;
-    width: 66%;
+    width: 70%;
     padding: 15px;
     opacity: 0.9;
     z-index: 0;
     font-size: 2vw;
-    margin: 150px 0 60px 0;
+    margin: 160px 0 60px 0;
     @extend .bottom-shadow;
 }
 
@@ -197,10 +207,9 @@ ul#horizontal-list li {
     border-radius: 3px;
     background: white;
     position: fixed;
-    top: 25px;
-    right: 30px;
+    top: 140px;
+    right: 50px;
     z-index: 3;
-
 }
 
 
