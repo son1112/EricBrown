@@ -1,6 +1,6 @@
 <div id='contact-form'>
   <%= image_tag("profile-50.jpg", class: "profile") %>
-  <div style="padding: 15px;">
+  <div class='contact-info'>
     <%= cms_snippet_content('contact-info', @cms_site).html_safe %>
   </div>
   <%= link_to 'Contact Me', contacts_path %>

@@ -13,6 +13,15 @@ html, body {
     background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
 }
 
+#full-page-rect {
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.1;
+    z-index: 3;
+    position: fixed;
+}
+
 .bottom-shadow {
     box-shadow: 0 1px 5px 0.2px gray;
 }
@@ -93,7 +102,7 @@ ul#horizontal-list li {
     height: 40px;
     text-align: left;
     background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;//    background: gold;
-    z-index: 3;
+    z-index: 2;
 //    opacity: 0.9;
     .name {
 	@extend .padded-15;
@@ -180,6 +189,12 @@ ul#horizontal-list li {
 	margin: 0 auto;
 	font-family: "Quicksand";
     }
+    .contact-info {
+	padding: 15px;
+	margin: 15px;
+	font-size: 1.5vw;
+	width: 60%;
+    }
 }
 
 .container {
@@ -191,7 +206,7 @@ ul#horizontal-list li {
     left: 255px;
     background: white;
     border-radius: 3px;
-    width: 70%;
+    width: 65%;
     padding: 15px;
     opacity: 0.9;
     z-index: 0;
@@ -203,12 +218,13 @@ ul#horizontal-list li {
 .page-title {
     @extend .padded-15;
     @extend .bottom-shadow;
+    padding-right: 70px;
     opacity: 0.9;
     border-radius: 3px;
     background: white;
     position: fixed;
     top: 140px;
-    right: 50px;
+    right: -5px;
     z-index: 3;
 }
 
