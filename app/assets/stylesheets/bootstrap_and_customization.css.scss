@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Quicksand|Ubuntu|Roboto|Open+Sans+Condensed:300|Raleway|Yanone+Kaffeesatz|Pacifico|Dancing+Script|Courgette|Cinzel);
 
-$phill-grn: #3f8000;
+	    $phill-grn: #3f8000;
 $phill-gold: #ffef19;
 $phill-blu: #e3f5fa;
 $phill-blu-light: #ebf7fa;
@@ -10,16 +10,15 @@ $phill-blu-light: #ebf7fa;
 html, body {
     font-family: "Open Sans Condensed";
     width: 100%;
-}
-
-body {
-    background: image-url('steve-andel-capitol.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
 }
 
 .bottom-shadow {
     box-shadow: 0 1px 5px 0.2px gray;
+}
+
+.hidden {
+    display: none;
 }
 
 .padded-5 {
@@ -117,6 +116,19 @@ ul#horizontal-list li {
     z-index: 1;
 }
 
+#contact-form {
+    @extend .padded-15;
+    @extend .bottom-shadow;
+    position: fixed;
+    top: 130px;
+    right: 30px;
+    z-index: 3;
+    background: white;
+    opacity: 0.9;
+    border-radius: 3px;
+    width: 20%;
+}
+
 .content {
     position: relative;
     background: white;
@@ -125,4 +137,54 @@ ul#horizontal-list li {
     padding: 15px;
     opacity: 0.8;
     z-index: 0;
+    font-size: 2vw;
+}
+
+.page-title {
+    @extend .padded-15;
+    @extend .bottom-shadow;
+    opacity: 0.9;
+    border-radius: 3px;
+    background: white;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 3;
+}
+
+
+/*flash*/
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+}
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+}
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+}
+
+.custom-notice {
+    position: absolute;
+    top: 50px;
+    right: 50px;
 }

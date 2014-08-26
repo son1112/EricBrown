@@ -1,7 +1,10 @@
 EricBrown::Application.routes.draw do
 
-  comfy_route :cms_admin, :path => '/admin'
+  match '/contacts', to: 'contacts#new', via: 'get'
+  resources "contacts", only: [:new, :create]
 
+  devise_for :users
+  comfy_route :cms_admin, :path => '/admin'
 
   root "static_pages#home"
 

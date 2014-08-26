@@ -124,6 +124,10 @@ Lincoln Home Market (Eric Brown)
 
 * Communication
 
+  - [ ] Contact Mailer
+
+      http://rubyonrailshelp.wordpress.com/2014/01/08/rails-4-simple-form-and-mail-form-to-make-contact-form/
+
 * Requirements
 
 * Configuration
