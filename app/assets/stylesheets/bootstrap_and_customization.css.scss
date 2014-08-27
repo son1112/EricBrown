@@ -106,15 +106,14 @@ ul#horizontal-list li {
     z-index: 4;
 //    opacity: 0.9;
     .name {
-	@extend .padded-15;
+//	@extend .padded-15;
 	@extend .bottom-shadow;
-	padding-bottom: 0;
+	padding: 30px 63px 0 15px;;
 	font-family: "Pacifico", "Quicksand";
-//	font-weight: bold;
 	font-style: italic;
 	position:relative;
-	top: -25px;
-	left: 5px;
+	top: -20px;
+	left: 15px;
 	background: white;
 	border-radius: 3px;
 	z-index: 3;
@@ -123,18 +122,14 @@ ul#horizontal-list li {
     .subtitle {
 	@extend .padded-15;
 	@extend .bottom-shadow;
-//	padding-left: 405px;
+	padding-top: 0;
 	padding-right: 20px;
 	padding-bottom: 0;
 	text-align: right;
 	font-family: "Open Sans Condensed""Cinzel", "Dancing Script", "Quicksand";
 	position:relative;
-//	font-style: italic;
 	color: black;
-//	top: -25px;
-//	top: 10px;
 	top: -60px;
-//	left: -145px;
 	left: 100px;
 	background: $phill-gold;
 	border-radius: 3px;
@@ -157,14 +152,27 @@ ul#horizontal-list li {
 }
 
 .rect-white {
-//    @extend .bottom-shadow;
     background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;//    background: white;
     width: 100%;
     position: fixed;
     top: 0;
     height: 140px;
-//    opacity: 0.5;
     z-index: 3;
+}
+
+#logos {
+    @extend .padded-15;
+    width: 15%;
+    height: 350px;
+    background: white;
+    position: absolute;
+    right: 35px;
+    top: 240px;
+    opacity: 0.9;
+    border-radius: 3px;
+    .hre {
+	width: 95%;
+    }
 }
 
 #contact-form {

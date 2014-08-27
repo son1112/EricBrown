@@ -1,14 +1,31 @@
 <div id="title">
-  <span class="name">Eric Brown</span> 
+  <span class="name"
+	data-0="top:-40px;padding-top:30px;"
+	data-1000="top:10px;padding-top:100px;"
+	>
+    Eric Brown
+  </span> 
   <span class="glyphicon glyphicon-tree-deciduous icon top-shadow"></span> 
-  <div class="subtitle">
-    <span class="sub">Home Real Estate</span>
+  <div class="subtitle"
+       data-0="left:-20px;"
+       data-500="left:-750px;"
+       >
+    <span class="sub"
+	  data-0="opacity:1;"
+	  data-400="opacity:0;"
+	  >
+      Home Real Estate</span>
   </div>
 </div>
-<div class='rect-white'>
+<div class='rect-white'
+     data-0='opacity:1;'
+     data-400='opacity:0;'>
   <div class='custom-notice'>
     <p class='notice'><%= notice %></p>
     <p class='alert'><%= alert %></p>
   </div>
+</div>
+<div id='logos'>
+  <%= image_tag("hrelogo.png", class: "hre") %>
 </div>
 
