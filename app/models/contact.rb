@@ -10,7 +10,8 @@ class Contact < MailForm::Base
     {
       :subject => "Lincoln Home Market - Eric Brown",
       :to => "eric.brown@homerealestate.com",
-      :from => %("#{name}" <#{email}>)
+      :from => %("#{name}" <#{email}>),
+      :'reply_to' => %(#{email})      
     }
   end
 end

@@ -1,19 +1,27 @@
 @import url(http://fonts.googleapis.com/css?family=Quicksand|Ubuntu|Roboto|Open+Sans+Condensed:300|Raleway|Yanone+Kaffeesatz|Pacifico|Dancing+Script|Courgette|Cinzel);
 
-	    $phill-grn: #3f8000;
+$phill-grn: #3f8000;
 $phill-gold: #ffef19;
 $phill-blu: #e3f5fa;
 $phill-blu-light: #ebf7fa;
+
+$light-sky: #008aed;
+$dark-sky: #0d4a76;
 
 @import 'bootstrap';
 
 html, body {
     font-family: "Open Sans Condensed";
     width: 100%;
-    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
+//    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
+//    background: image-url('sunken-gardens-rotated90.jpg') no-repeat fixed;
+    background: image-url('house1-rotate90.jpg') no-repeat center center fixed;
+    background-size: cover;
+
 }
 
 #full-page-rect {
+    display: none;
     width: 100%;
     height: 100%;
     background: white;
@@ -84,10 +92,11 @@ ul#horizontal-list li {
     @extend .padded-15-lr;
     font-size: 2vw;
     a {
-	color: $phill-grn;
+	color: $dark-sky;
 	font-weight: bold;
 	&:hover {
 	    text-decoration: none;
+	    color: $light-sky;
 	}
     }
 }
@@ -102,22 +111,32 @@ ul#horizontal-list li {
     right: 0;
     height: 0;//110px;
     text-align: left;
-    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;//    background: gold;
+//    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;//    background: gold;
+//    background: image-url('sunken-gardens.jpg') no-repeat center center fixed;
     z-index: 4;
 //    opacity: 0.9;
     .name {
 //	@extend .padded-15;
 	@extend .bottom-shadow;
-	padding: 30px 63px 0 15px;;
+	padding: 100px 63px 20px 15px;;
 	font-family: "Pacifico", "Quicksand";
 	font-style: italic;
 	position:relative;
-	top: -20px;
+	top: 10px;
 	left: 15px;
 	background: white;
 	border-radius: 3px;
 	z-index: 3;
-	color: $phill-grn;
+//	color: black;
+	color: $dark-sky;
+//	opacity: 0.9;
+    }
+    .realtor {
+	position: relative;
+	top: 40px;
+	right: 100px;
+	font-size: 2vw;
+	z-index: 4;
     }
     .subtitle {
 	@extend .padded-15;
@@ -134,6 +153,11 @@ ul#horizontal-list li {
 	background: $phill-gold;
 	border-radius: 3px;
 	width: 80%;
+	.sub {
+	    .hre {
+		width: 20%;
+	    }
+	}
     }
     .icon {
 	font-size: 7vw;
@@ -152,20 +176,23 @@ ul#horizontal-list li {
 }
 
 .rect-white {
-    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;//    background: white;
+//    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
+    background: image-url('house1-rotate90.jpg') no-repeat center center fixed;
+    background-size: cover;
     width: 100%;
     position: fixed;
     top: 0;
     height: 140px;
     z-index: 3;
+
 }
 
-#logos {
+#refs {
     @extend .padded-15;
     width: 15%;
     height: 350px;
     background: white;
-    position: absolute;
+    position: fixed;
     right: 35px;
     top: 240px;
     opacity: 0.9;
@@ -183,7 +210,7 @@ ul#horizontal-list li {
     left: 30px;
     z-index: 3;
     background: white;
-    opacity: 0.9;
+//    opacity: 0.9;
     border-radius: 3px;
     width: 20%;
     .profile {
@@ -193,20 +220,35 @@ ul#horizontal-list li {
 	border-radius: 3px;
 	@extend .bottom-shadow;
     }
+    .contact-info {
+//	border: 2px solid $dark-sky;
+	padding: 0 15px;
+	margin: 15px;
+	font-size: 1.5vw;
+	width: 90%;
+	p {
+	    word-wrap: break-word;
+	    text-align: center;
+	}
+    }
     a {
-	color: $phill-grn;
+	color: $dark-sky;
 	font-weight: bold;
 	font-size: 2vw;
 	display: table;
 	margin: 0 auto;
 	font-family: "Quicksand";
     }
-    .contact-info {
-	padding: 15px;
-	margin: 15px;
-	font-size: 1.5vw;
-	width: 60%;
-    }
+}
+
+#contact-fields {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
 }
 
 .container {
@@ -217,10 +259,12 @@ ul#horizontal-list li {
     position: relative;
     left: 255px;
     background: white;
+    color: black;
+//    background: transparent;
     border-radius: 3px;
     width: 65%;
     padding: 15px;
-    opacity: 0.9;
+    opacity: 0.6;
     z-index: 2;
     font-size: 2vw;
     margin: 160px 0 60px 0;
@@ -271,3 +315,7 @@ ul#horizontal-list li {
     text-align: left;
 }
 
+.transparent {
+//    opacity: 0.8;
+    background: transparent;
+}
