@@ -21,6 +21,12 @@
 
 <div id='refs'>
   <h3>References</h3>
-  <%= cms_snippet_content('references', @cms_site).html_safe %>
+  <div class='refs'>
+    <%= cms_snippet_content('references', @cms_site).html_safe %>
+  </div>
+  <div class='bottom hidden'>
+    <%= image_tag('EqualHousing.png', class: 'eqhouse') %>
+    <%= image_tag('REALTOR-Logo.png', class: 'eqhouse') %>
+  </div>
 </div>
 

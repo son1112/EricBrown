@@ -31,11 +31,11 @@ html, body {
 }
 
 .bottom-shadow {
-    box-shadow: 0 1px 5px 0.2px gray;
+    box-shadow: 0 1px 5px 0.2px black;
 }
 
 .top-shadow {
-    box-shadow: 0 1px -5px 0.2px gray;
+    box-shadow: 0 1px -5px 0.2px black;
 }
 
 .hidden {
@@ -67,12 +67,24 @@ html, body {
     background: $phill-gold;
     position: fixed;
     bottom: 5px;
-    right: -5px;
-    width: 75%;
+    right: 3%;
+    width: 95%;
     border-radius: 3px;
     height: 40px;
     opacity: 0.9;
     z-index: 4;
+    .menu-logos {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20%;
+	margin-right: 15px;
+	img {
+	    width: 15%;
+	    padding: 5px;
+	    float: right;
+	}
+    }
 }
 
 .table {
@@ -83,8 +95,8 @@ html, body {
 ul#horizontal-list {
     @extend .padded;
     list-style: none;
-    text-align: right;
-    margin-right: 160px;
+    text-align: left;
+//    margin-right: 40%;
 }
 
 ul#horizontal-list li {
@@ -100,6 +112,22 @@ ul#horizontal-list li {
 	}
     }
 }
+
+.bottom {
+//    position: fixed;
+    position: relative;
+    bottom: 14%;
+//    left: 1px;
+//    width: 50%;
+    display: inline-block;
+    .eqhouse {
+	width: 30%;
+	padding: 5px 15px;
+	margin: 5px 15px;
+	float: right;
+    }
+}
+
 
 #title {
     @extend #menu-outer;
@@ -188,15 +216,24 @@ ul#horizontal-list li {
 }
 
 #refs {
-    @extend .padded-15;
+
     width: 15%;
-    height: 350px;
+    height: 65%;
     background: white;
     position: fixed;
-    right: 35px;
-    top: 240px;
+    right: 3%;
+    top: 23%;
     opacity: 0.9;
     border-radius: 3px;
+    h3 {
+	@extend .padded-15;
+	text-align: center;
+	text-decoration: underline;
+	color: $dark-sky;
+    }
+    .refs {
+	height: 80%;
+    }
     .hre {
 	width: 95%;
     }
@@ -213,6 +250,7 @@ ul#horizontal-list li {
 //    opacity: 0.9;
     border-radius: 3px;
     width: 20%;
+    height: 65%;
     .profile {
 	width: 80%;
 	display: table;
@@ -257,7 +295,7 @@ ul#horizontal-list li {
 
 .content {
     position: relative;
-    left: 255px;
+    left: 20%;
     background: white;
     color: black;
 //    background: transparent;
@@ -272,6 +310,7 @@ ul#horizontal-list li {
 }
 
 .page-title {
+    display: none;
     @extend .padded-15;
     @extend .bottom-shadow;
     padding-right: 70px;
@@ -282,6 +321,7 @@ ul#horizontal-list li {
     top: 140px;
     right: -5px;
     z-index: 3;
+    overflow: hidden;
 }
 
 
