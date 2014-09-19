@@ -70,7 +70,7 @@ html, body {
     right: 3%;
     width: 95%;
     border-radius: 3px;
-    height: 40px;
+    height: 6%;
     opacity: 0.9;
     z-index: 4;
     .menu-logos {
@@ -93,7 +93,7 @@ html, body {
 }
 
 ul#horizontal-list {
-    @extend .padded;
+//    @extend .padded;
     list-style: none;
     text-align: left;
 //    margin-right: 40%;
@@ -139,14 +139,10 @@ ul#horizontal-list li {
     right: 0;
     height: 0;//110px;
     text-align: left;
-//    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;//    background: gold;
-//    background: image-url('sunken-gardens.jpg') no-repeat center center fixed;
     z-index: 4;
-//    opacity: 0.9;
     .name {
-//	@extend .padded-15;
 	@extend .bottom-shadow;
-	padding: 100px 63px 20px 15px;;
+	padding: 100px 5.25% 20px 15px;;
 	font-family: "Pacifico", "Quicksand";
 	font-style: italic;
 	position:relative;
@@ -155,14 +151,13 @@ ul#horizontal-list li {
 	background: white;
 	border-radius: 3px;
 	z-index: 3;
-//	color: black;
 	color: $dark-sky;
-//	opacity: 0.9;
+	overflow: hidden;
     }
     .realtor {
 	position: relative;
 	top: 40px;
-	right: 100px;
+	right: 7%;
 	font-size: 2vw;
 	z-index: 4;
     }
@@ -210,7 +205,7 @@ ul#horizontal-list li {
     width: 100%;
     position: fixed;
     top: 0;
-    height: 140px;
+    height: 20%;
     z-index: 3;
 
 }
@@ -243,8 +238,8 @@ ul#horizontal-list li {
     @extend .padded-15;
     @extend .bottom-shadow;
     position: fixed;
-    top: 160px;
-    left: 30px;
+    top: 25%;
+    left: 35px;
     z-index: 3;
     background: white;
 //    opacity: 0.9;
@@ -299,6 +294,7 @@ ul#horizontal-list li {
 
 .content {
     position: relative;
+    top: 120px;
     left: 20%;
     background: white;
     color: black;
@@ -362,4 +358,17 @@ ul#horizontal-list li {
 .transparent {
 //    opacity: 0.8;
     background: transparent;
+}
+
+@media screen and (max-width: 1400px) {
+    .content {
+	top: 30px
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .content {
+	width: 90%;
+	left: 10%;
+    }
 }
