@@ -15,6 +15,7 @@ html, body {
     width: 100%;
 //    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
 //    background: image-url('sunken-gardens-rotated90.jpg') no-repeat fixed;
+//    background: image-url('house1-filtered.png') no-repeat center center fixed;
     background: image-url('house1-rotate90.jpg') no-repeat center center fixed;
     background-size: cover;
 
@@ -179,6 +180,7 @@ ul#horizontal-list li {
 	.sub {
 	    .hre {
 		width: 20%;
+		padding: 5px;
 	    }
 	}
     }
@@ -201,6 +203,7 @@ ul#horizontal-list li {
 .rect-white {
 //    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
     background: image-url('house1-rotate90.jpg') no-repeat center center fixed;
+//    background: image-url('house1-filtered.png') no-repeat center center fixed;
     background-size: cover;
     width: 100%;
     position: fixed;
@@ -258,11 +261,14 @@ ul#horizontal-list li {
 	padding: 0 15px;
 	margin: 15px;
 	font-size: 1.5vw;
-	width: 90%;
+	width: 100%;
 	height: 90%;
 	p {
 	    word-wrap: break-word;
 	    text-align: center;
+	}
+	.special-link {
+
 	}
     }
     a {
@@ -273,7 +279,9 @@ ul#horizontal-list li {
 	font-size: 2vw;
 	display: table;
 	margin: 0 auto;
-//	padding: 0 0 5px 0;
+	background: $phill-gold;
+	border-radius: 5px;
+	padding: 0 15px 0 15px;
 	font-family: "Quicksand";
     }
 }
@@ -292,6 +300,10 @@ ul#horizontal-list li {
 //    background: image-url('steve-andel-capitol.jpg') no-repeat center center fixed;
 }
 
+.main {
+    margin-bottom: 150px;
+}
+
 .content {
     position: relative;
     top: 120px;
@@ -306,6 +318,7 @@ ul#horizontal-list li {
     z-index: 2;
     font-size: 2vw;
     margin: 160px 0 60px 0;
+    text-align: justify;
     @extend .bottom-shadow;
 }
 
@@ -370,5 +383,61 @@ ul#horizontal-list li {
     .content {
 	width: 90%;
 	left: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    html, body {
+	background-size: contain;
+    }
+    
+    #title {
+	.name {
+	    font-size: 10vw;
+	}
+	.realtor {
+	    font-size: 7vw;
+	    top: 45px;
+	    right: 25%;
+	}
+	.subtitle {
+	    .sub {
+		.hre {
+		    width: 50%;
+		    padding: 5px;
+		}
+	    }
+	}
+    }
+
+    #contact-form {
+	position: relative;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	.contact-info {
+	    font-size: 5vw;
+	}
+	.special-link {
+	    background: $phill-gold;
+	    padding: 15px;
+	    font-size: 6vw;
+	    border-radius: 5px;
+	}
+    }
+
+    .content {
+	font-size: 7vw;
+	width: 100%;
+	left: 0;
+    }
+
+    #refs {
+	display: none;
+    }
+    
+    .rect-white {
+	height: 15%;
     }
 }

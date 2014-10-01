@@ -14,12 +14,11 @@
   <%= render 'layouts/header' %>
 
   <div id='skrollr-body'>
-    <div class="container">
+    <div class="container main">
       <%= yield %>
+      <%= render 'layouts/contact' %>
     </div>
   </div>
-
-  <%= render 'layouts/contact' %>
 
   <%= render 'layouts/footer' %>
 
