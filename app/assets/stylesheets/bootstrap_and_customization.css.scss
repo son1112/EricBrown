@@ -310,16 +310,20 @@ ul#horizontal-list li {
     left: 20%;
     background: white;
     color: black;
-//    background: transparent;
     border-radius: 3px;
     width: 65%;
-    padding: 15px;
-    opacity: 0.6;
+    padding: 35px 40px 20px 40px;
+    opacity: 0.8;
     z-index: 2;
-    font-size: 2vw;
     margin: 160px 0 60px 0;
     text-align: justify;
+    font-size: 2vw;	
     @extend .bottom-shadow;
+
+    span {
+	font-size: 2vw;	
+//	font-family: "Open Sans Condensed";
+    }
 }
 
 .page-title {
