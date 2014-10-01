@@ -2,7 +2,6 @@
   <%= image_tag("profile-50.jpg", class: "profile") %>
   <div class='contact-info'>
     <%= cms_snippet_content('contact-info', @cms_site).html_safe %>
-    <%#= mail_to "eric.brown@homerealestate.com" %>
     <%= link_to 'Contact Me', contacts_path, class: "special-link" %>
   </div>
 </div>

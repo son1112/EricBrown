@@ -63,10 +63,14 @@ html, body {
     padding: 0 15px;
 }
 
-#menu-outer {
+.menu-style {
     @extend .bottom-shadow;
     background: $phill-gold;
     position: fixed;
+}
+
+#menu-outer {
+    @extend .menu-style;
     bottom: 5px;
     right: 3%;
     width: 95%;
@@ -131,7 +135,7 @@ ul#horizontal-list li {
 
 
 #title {
-    @extend #menu-outer;
+    @extend .menu-style;
     box-shadow: none;
     width: 100%;
     padding-left: 15px;
@@ -254,12 +258,12 @@ ul#horizontal-list li {
 	display: table;
 	margin: 0 auto;
 	border-radius: 3px;
-	@extend .bottom-shadow;
+//	@extend .bottom-shadow;
     }
     .contact-info {
 //	border: 2px solid $dark-sky;
-	padding: 0 15px;
-	margin: 15px;
+	padding: 0 15px 5px 0px;
+//	margin: 15px;
 	font-size: 1.5vw;
 	width: 100%;
 	height: 90%;
@@ -268,7 +272,8 @@ ul#horizontal-list li {
 	    text-align: center;
 	}
 	.special-link {
-
+	    top: 5px;
+//	    margin: 5px;
 	}
     }
     a {
@@ -397,15 +402,18 @@ ul#horizontal-list li {
     }
     
     #title {
+	right: 17px;
 	.name {
 	    font-size: 10vw;
 	}
 	.realtor {
 	    font-size: 7vw;
-	    top: 45px;
+	    top: 40px;
 	    right: 25%;
 	}
 	.subtitle {
+	    top: -30px;
+	    left: 90px;
 	    .sub {
 		.hre {
 		    width: 50%;
@@ -431,10 +439,24 @@ ul#horizontal-list li {
 	}
     }
 
+    #menu-outer {
+	display: none;
+    }
+
     .content {
 	font-size: 7vw;
 	width: 100%;
 	left: 0;
+    }
+
+    .main {
+	margin-bottom: 30px;
+    }
+
+    #fix {
+	p {
+	    font-size: 7vw;
+	}
     }
 
     #refs {
