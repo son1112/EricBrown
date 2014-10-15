@@ -70,7 +70,7 @@ html, body {
 }
 
 .menu-style {
-    @extend .bottom-shadow;
+//    @extend .bottom-shadow;
     background: $phill-gold;
     position: fixed;
 }
@@ -82,7 +82,7 @@ html, body {
     width: 95%;
     border-radius: 3px;
     height: 40px;
-    opacity: 0.9;
+    opacity: 1;
     z-index: 4;
     .menu-logos {
 	position: absolute;
@@ -152,7 +152,7 @@ ul#horizontal-list li {
     text-align: left;
     z-index: 4;
     .name {
-	@extend .bottom-shadow;
+//	@extend .bottom-shadow;
 	padding: 100px 5.25% 20px 15px;;
 	font-family: "Pacifico", "Quicksand";
 	font-style: italic;
@@ -174,7 +174,7 @@ ul#horizontal-list li {
     }
     .subtitle {
 	@extend .padded-15;
-	@extend .bottom-shadow;
+//	@extend .bottom-shadow;
 	padding-top: 0;
 	padding-right: 20px;
 	padding-bottom: 0;
@@ -249,7 +249,7 @@ ul#horizontal-list li {
 
 #contact-form {
     @extend .padded-15;
-    @extend .bottom-shadow;
+//    @extend .bottom-shadow;
     position: fixed;
     top: 25%;
     left: 35px;
@@ -267,9 +267,9 @@ ul#horizontal-list li {
 //	@extend .bottom-shadow;
     }
     .contact-info {
-//	border: 2px solid $dark-sky;
-	padding: 0 15px 5px 0px;
-//	margin: 15px;
+	@extend .center;
+
+//	padding: 0 15px 5px 0px;
 	font-size: 1.5vw;
 	width: 100%;
 	height: 90%;
@@ -278,8 +278,8 @@ ul#horizontal-list li {
 	    text-align: center;
 	}
 	.special-link {
+	    position: relative;
 	    top: 5px;
-//	    margin: 5px;
 	}
     }
     a {
@@ -324,12 +324,12 @@ ul#horizontal-list li {
     border-radius: 3px;
     width: 65%;
     padding: 35px 40px 20px 40px;
-    opacity: 0.8;
+    opacity: 0.7;
     z-index: 2;
     margin: 160px 0 60px 0;
     text-align: justify;
     font-size: 2vw;	
-    @extend .bottom-shadow;
+//    @extend .bottom-shadow;
 
     span {
 	font-size: 2vw;	
