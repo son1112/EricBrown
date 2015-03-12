@@ -11,16 +11,36 @@
 
   <div id='full-page-rect'></div>
 
-  <%= render 'layouts/header' %>
+
 
   <div id='skrollr-body'>
-    <div class="container main">
-      <%= yield %>
-      <%= render 'layouts/contact' %>
+    <div class="container-fluid main">
+      <div class='col-md-12'>
+
+	<div class='row'>
+	  <%= render 'layouts/header' %>
+	</div>
+	
+	<div class='row'>
+	  <div class='col-md-2'>
+	    <%= render 'layouts/contact' %>
+	  </div>
+	  <div class='col-md-8'>
+	    <%= yield %>
+	  </div>
+	  <div class='col-md-2'>
+	    <%= render 'layouts/sidebar_right' %>
+	  </div>
+	</div>
+
+	<div class='row'>
+	  <%= render 'layouts/footer' %>
+	</div>
+
+      </div>
     </div>
   </div>
 
-  <%= render 'layouts/footer' %>
 
   <script>
    (function($){

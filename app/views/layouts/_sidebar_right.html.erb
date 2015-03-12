@@ -1,0 +1,23 @@
+<div id='refs'>
+  <h3>Testimonials</h3>
+  <div class='refs'>
+    <%= cms_snippet_content('testimonials', @cms_site).html_safe %>
+  </div>
+  <div class='bottom hidden'>
+    <%= image_tag('EqualHousing.png', class: 'eqhouse') %>
+    <%= image_tag('REALTOR-Logo.png', class: 'eqhouse') %>
+  </div>
+</div>
+
+<script>
+ // $('.testimonial').hide();
+ var divs = $('div[id^="testimonial-"]').hide(),
+    i = 0;
+
+(function cycle() {
+    divs.eq(i).fadeIn(400).delay(5000).fadeOut(400, cycle);
+
+    i = ++i % divs.length;
+})();
+
+</script>

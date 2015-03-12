@@ -1,8 +1,8 @@
-<div id="title">
 
+<div class='col-md-1'></div>
+<div id="title" class='col-md-11'>
   <span class="name">
     Eric Brown
-
   </span> 
   <span class='realtor'>Realtor&#0174</span>
   <span class="glyphicon glyphicon-tree-deciduous icon top-shadow"></span>
@@ -12,6 +12,8 @@
     </span>
   </div>
 </div>
+
+
 <div class='rect-white'>
   <div class='custom-notice'>
     <p class='notice'><%= notice %></p>
@@ -19,14 +21,4 @@
   </div>
 </div>
 
-<div id='refs'>
-  <h3>Testimonials</h3>
-  <div class='refs'>
-    <%= cms_snippet_content('testimonials', @cms_site).html_safe %>
-  </div>
-  <div class='bottom hidden'>
-    <%= image_tag('EqualHousing.png', class: 'eqhouse') %>
-    <%= image_tag('REALTOR-Logo.png', class: 'eqhouse') %>
-  </div>
-</div>
 
